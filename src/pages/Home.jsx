@@ -65,10 +65,26 @@ const serviceHighlights = [
 ];
 
 const reasons = [
-  "Person-centered care that supports dignity and independence",
-  "Reliable help with daily routines in the comfort of home",
-  "Compassionate support for clients, families, and caregivers",
-  "Clear non-medical services focused on safety and comfort",
+  {
+    title: "Care That Respects Independence",
+    description:
+      "Support is centered around each client's routines, preferences, dignity, and comfort at home.",
+  },
+  {
+    title: "Reliable Help With Daily Living",
+    description:
+      "From personal care to household support, our services help make everyday life safer and easier.",
+  },
+  {
+    title: "Compassion for Families Too",
+    description:
+      "We provide reassuring support for clients while helping families feel informed and confident.",
+  },
+  {
+    title: "Clear Non-Medical Support",
+    description:
+      "Our role is personal assistance, companionship, safety monitoring, and daily routine support.",
+  },
 ];
 
 const counties = [
@@ -81,15 +97,16 @@ const counties = [
 function Home() {
   return (
     <main id="home" className="pb-16 md:pb-0">
-      <section
-        className="relative flex min-h-[calc(100vh-73px)] items-center overflow-hidden bg-blue-950 px-6 py-20 text-white"
-        style={{
-          backgroundImage: `linear-gradient(90deg, rgba(23, 37, 84, 0.92), rgba(23, 37, 84, 0.68), rgba(23, 37, 84, 0.16)), url(${heroImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="relative flex min-h-[calc(100vh-73px)] items-center overflow-hidden bg-blue-950 px-6 py-20 text-white">
+        <img
+          src={heroImage}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-[73%_center] sm:object-[72%_center] md:object-[76%_center] xl:object-center"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/85 via-blue-950/45 to-blue-950/10 sm:from-blue-950/80 sm:via-blue-950/35 lg:from-blue-950/90 lg:via-blue-950/55 lg:to-blue-950/5" />
+
+        <div className="relative mx-auto w-full max-w-6xl">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-teal-200">
               Texas-Licensed Personal Assistance Services
@@ -210,10 +227,15 @@ function Home() {
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {reasons.map((reason) => (
               <div
-                key={reason}
+                key={reason.title}
                 className="rounded-lg border border-blue-100 bg-white p-6 shadow-sm"
               >
-                <p className="font-semibold leading-7 text-blue-900">{reason}</p>
+                <h3 className="text-lg font-semibold text-blue-900">
+                  {reason.title}
+                </h3>
+                <p className="mt-3 leading-7 text-gray-700">
+                  {reason.description}
+                </p>
               </div>
             ))}
           </div>
