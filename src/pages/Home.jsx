@@ -104,19 +104,19 @@ const resourceLinks = [
     title: "Notice of Privacy Practices / HIPAA",
     description:
       "Privacy information explaining how protected health information may be used and safeguarded.",
-    href: "/documents/notice-of-privacy-practices-hipaa.pdf",
+    href: "/documents/notice-of-privacy-practices.pdf",
   },
   {
     title: "Service Plan Process",
     description:
       "An overview of how personal assistance needs are reviewed, planned, and updated over time.",
-    href: "/documents/service-plan-process.pdf",
+    href: "/documents/service-plan-acknowledgment.pdf",
   },
   {
     title: "What to Expect During Home Visits",
     description:
       "A simple guide to what clients and families can expect from non-medical support during visits.",
-    href: "/documents/what-to-expect-during-home-visits.pdf",
+    href: "",
   },
   {
     title: "PAS Scope of Services",
@@ -307,12 +307,20 @@ function Home() {
                 <p className="mt-3 flex-1 leading-7 text-gray-700">
                   {resource.description}
                 </p>
-                <a
-                  href={resource.href}
-                  className="mt-6 inline-flex justify-center rounded-lg bg-teal-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-teal-700"
-                >
-                  View / Download
-                </a>
+                {resource.href ? (
+                  <a
+                    href={resource.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-6 inline-flex justify-center rounded-lg bg-teal-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-teal-700"
+                  >
+                    View / Download
+                  </a>
+                ) : (
+                  <span className="mt-6 inline-flex justify-center rounded-lg border border-blue-200 bg-white px-4 py-3 text-sm font-semibold text-blue-900">
+                    Coming Soon
+                  </span>
+                )}
               </article>
             ))}
           </div>
