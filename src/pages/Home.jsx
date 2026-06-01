@@ -87,6 +87,45 @@ const reasons = [
   },
 ];
 
+const resourceLinks = [
+  {
+    title: "Client Rights & Responsibilities",
+    description:
+      "A client resource outlining rights, responsibilities, and important expectations for receiving care.",
+    href: "/documents/client-rights-responsibilities.pdf",
+  },
+  {
+    title: "Grievance Procedure",
+    description:
+      "Information about how clients and families can share concerns, complaints, or service feedback.",
+    href: "/documents/grievance-procedure.pdf",
+  },
+  {
+    title: "Notice of Privacy Practices / HIPAA",
+    description:
+      "Privacy information explaining how protected health information may be used and safeguarded.",
+    href: "/documents/notice-of-privacy-practices-hipaa.pdf",
+  },
+  {
+    title: "Service Plan Process",
+    description:
+      "An overview of how personal assistance needs are reviewed, planned, and updated over time.",
+    href: "/documents/service-plan-process.pdf",
+  },
+  {
+    title: "What to Expect During Home Visits",
+    description:
+      "A simple guide to what clients and families can expect from non-medical support during visits.",
+    href: "/documents/what-to-expect-during-home-visits.pdf",
+  },
+  {
+    title: "PAS Scope of Services",
+    description:
+      "A non-medical PAS overview describing the types of daily living support Safe Comfort may provide.",
+    href: "/documents/pas-scope-of-services.pdf",
+  },
+];
+
 const counties = [
   "Fort Bend County",
   "Harris County",
@@ -248,12 +287,39 @@ function Home() {
             Client Resources
           </p>
           <h2 className="mt-3 text-3xl font-bold text-blue-900">
-            Helpful documents will live here
+            Helpful documents for clients and families
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-700">
-            This section will include client rights and responsibilities,
-            grievance procedures, privacy practices, service plan information,
-            and what to expect during home visits.
+            These resources will help explain client rights, privacy practices,
+            the service planning process, and what to expect from non-medical
+            personal assistance services.
+          </p>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {resourceLinks.map((resource) => (
+              <article
+                key={resource.title}
+                className="flex flex-col rounded-lg border border-blue-100 bg-blue-50 p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-semibold text-blue-900">
+                  {resource.title}
+                </h3>
+                <p className="mt-3 flex-1 leading-7 text-gray-700">
+                  {resource.description}
+                </p>
+                <a
+                  href={resource.href}
+                  className="mt-6 inline-flex justify-center rounded-lg bg-teal-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-teal-700"
+                >
+                  View / Download
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-8 rounded-lg bg-blue-900 px-5 py-4 text-sm leading-6 text-blue-50">
+            Downloadable documents are placeholders for now and will be
+            finalized after the client confirms which files should be public.
           </p>
         </div>
       </section>
