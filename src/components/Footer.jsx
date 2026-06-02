@@ -56,10 +56,10 @@ function Footer() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#resources" className="hover:text-white">
+            <a href="/#resources" className="hover:text-white">
               Client Resources
             </a>
-            <a href="#contact" className="hover:text-white">
+            <a href="/#contact" className="hover:text-white">
               Contact
             </a>
             <a href="#privacy" className="hover:text-white">

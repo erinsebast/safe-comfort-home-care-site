@@ -332,21 +332,6 @@ function Home() {
         </div>
       </section>
 
-      <section id="careers" className="scroll-mt-24 px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-semibold uppercase tracking-wide text-teal-700">
-            Careers
-          </p>
-          <h2 className="mt-3 text-3xl font-bold text-blue-900">
-            Join a compassionate care team
-          </h2>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-700">
-            A future application section will allow PAS attendants to share
-            contact details, availability, experience, and resume information.
-          </p>
-        </div>
-      </section>
-
       <section id="request" className="scroll-mt-24 bg-blue-900 px-6 py-20">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 text-white md:flex-row md:items-center md:justify-between">
           <div>

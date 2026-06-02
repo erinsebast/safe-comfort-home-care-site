@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Resources", href: "#resources" },
-  { label: "Careers", href: "#careers" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "About", href: "/#about" },
+  { label: "Resources", href: "/#resources" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 function Navbar() {
@@ -20,7 +20,7 @@ function Navbar() {
       <nav className="mx-auto max-w-6xl px-6" aria-label="Primary navigation">
         <div className="flex items-center justify-between py-4">
           <a
-            href="#home"
+            href="/"
             className="flex min-w-0 items-center gap-3"
             onClick={closeMenu}
           >
@@ -43,7 +43,7 @@ function Navbar() {
               </a>
             ))}
             <a
-              href="#request"
+              href="/#request"
               className="rounded-lg bg-teal-600 px-4 py-2 text-white transition hover:bg-teal-700"
             >
               Request Services
@@ -80,7 +80,7 @@ function Navbar() {
                 </a>
               ))}
               <a
-                href="#request"
+                href="/#request"
                 className="rounded-lg bg-teal-600 px-4 py-3 text-center text-white transition hover:bg-teal-700"
                 onClick={closeMenu}
               >
