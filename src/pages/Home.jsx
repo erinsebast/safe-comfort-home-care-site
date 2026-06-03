@@ -116,7 +116,7 @@ const resourceLinks = [
     title: "What to Expect During Home Visits",
     description:
       "A simple guide to what clients and families can expect from non-medical support during visits.",
-    href: "",
+    href: "/documents/what-to-expect-during-home-visits.pdf",
   },
   {
     title: "PAS Scope of Services",
