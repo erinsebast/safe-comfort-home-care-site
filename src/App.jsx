@@ -2,11 +2,16 @@ import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Careers from "./pages/Careers";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 function App() {
   const currentPath = window.location.pathname;
-  const CurrentPage = currentPath === "/careers" ? Careers : Home;
+  const pageRoutes = {
+    "/careers": Careers,
+    "/contact": Contact,
+  };
+  const CurrentPage = pageRoutes[currentPath] ?? Home;
 
   useEffect(() => {
     function scrollToCurrentHash() {

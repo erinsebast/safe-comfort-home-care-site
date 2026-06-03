@@ -126,13 +126,6 @@ const resourceLinks = [
   },
 ];
 
-const counties = [
-  "Fort Bend County",
-  "Harris County",
-  "Brazoria County",
-  "Waller County",
-];
-
 function Home() {
   return (
     <main id="home" className="pb-16 md:pb-0">
@@ -206,7 +199,7 @@ function Home() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="#request"
+              href="/contact"
               className="rounded-lg bg-teal-600 px-5 py-3 font-semibold text-white transition hover:bg-teal-700"
             >
               Request Care Today
@@ -347,7 +340,7 @@ function Home() {
             </p>
           </div>
           <a
-            href="#contact"
+            href="/contact"
             className="rounded-lg bg-teal-400 px-5 py-3 text-center font-semibold text-blue-950 transition hover:bg-teal-300"
           >
             Contact Us
@@ -367,51 +360,6 @@ function Home() {
             Testimonials can be added here once Safe Comfort Home Care has
             approved family or client feedback to publish.
           </p>
-        </div>
-      </section>
-
-      <section id="contact" className="scroll-mt-24 px-6 py-20">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-teal-700">
-              Service Area
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-blue-900">
-              Serving the Houston region
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-700">
-              Safe Comfort Home Care serves families across the greater Houston
-              area, including:
-            </p>
-            <ul className="mt-6 grid gap-3 text-gray-700 sm:grid-cols-2">
-              {counties.map((county) => (
-                <li key={county} className="rounded-lg bg-white px-4 py-3">
-                  {county}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <h3 className="text-xl font-bold text-blue-900">Contact Us</h3>
-            <p className="mt-4 leading-7 text-gray-700">
-              18115 Emerybrook Court
-              <br />
-              Richmond, Texas 77407
-            </p>
-            <p className="mt-4 leading-7 text-gray-700">
-              <a href="tel:8327577011" className="font-semibold text-teal-700">
-                832-757-7011
-              </a>
-              <br />
-              <a
-                href="mailto:safecomforthc@gmail.com"
-                className="font-semibold text-teal-700"
-              >
-                safecomforthc@gmail.com
-              </a>
-            </p>
-          </div>
         </div>
       </section>
 

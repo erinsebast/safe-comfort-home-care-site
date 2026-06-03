@@ -59,7 +59,7 @@ function Footer() {
             <a href="/#resources" className="hover:text-white">
               Client Resources
             </a>
-            <a href="/#contact" className="hover:text-white">
+            <a href="/contact" className="hover:text-white">
               Contact
             </a>
             <a href="#privacy" className="hover:text-white">
