@@ -12,6 +12,21 @@ const minimumRequirements = [
   "Able to follow care plan instructions and maintain client confidentiality.",
 ];
 
+const employmentDocuments = [
+  {
+    title: "Employment Application",
+    description:
+      "Download the employment application form to review or complete as part of the hiring process.",
+    href: "/documents/employment-application.pdf",
+  },
+  {
+    title: "PAS Attendant Job Description",
+    description:
+      "Review the PAS attendant role, responsibilities, and expectations before applying.",
+    href: "/documents/pas-attendant-job-description.pdf",
+  },
+];
+
 function Careers() {
   return (
     <main className="px-6 py-20">
@@ -81,6 +96,40 @@ function Careers() {
                   </li>
                 ))}
               </ul>
+            </article>
+
+            <article className="rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-bold text-blue-900">
+                Employment Documents
+              </h2>
+              <p className="mt-3 leading-7 text-gray-700">
+                These confirmed public employment documents are available for
+                applicants to review or download.
+              </p>
+
+              <div className="mt-5 space-y-4">
+                {employmentDocuments.map((document) => (
+                  <div
+                    key={document.title}
+                    className="border-t border-blue-100 pt-4 first:border-t-0 first:pt-0"
+                  >
+                    <h3 className="font-semibold text-blue-900">
+                      {document.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-gray-700">
+                      {document.description}
+                    </p>
+                    <a
+                      href={document.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-3 inline-flex rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-700"
+                    >
+                      View / Download
+                    </a>
+                  </div>
+                ))}
+              </div>
             </article>
           </div>
 
