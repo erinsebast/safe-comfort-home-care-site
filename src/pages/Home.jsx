@@ -91,38 +91,44 @@ const resourceLinks = [
   {
     title: "Client Rights & Responsibilities",
     description:
-      "A client resource outlining rights, responsibilities, and important expectations for receiving care.",
-    href: "/documents/client-rights-responsibilities.pdf",
+      "Learn about client rights, responsibilities, and expectations for receiving respectful care.",
+    href: "",
+    status: "summary",
   },
   {
     title: "Grievance Procedure",
     description:
-      "Information about how clients and families can share concerns, complaints, or service feedback.",
-    href: "/documents/grievance-procedure.pdf",
+      "Review how clients and families can share concerns, complaints, or service feedback.",
+    href: "",
+    status: "summary",
   },
   {
     title: "Notice of Privacy Practices / HIPAA",
     description:
-      "Privacy information explaining how protected health information may be used and safeguarded.",
-    href: "/documents/notice-of-privacy-practices.pdf",
+      "Understand how privacy practices protect personal and health-related information.",
+    href: "",
+    status: "summary",
   },
   {
     title: "Service Plan Process",
     description:
-      "An overview of how personal assistance needs are reviewed, planned, and updated over time.",
-    href: "/documents/service-plan-acknowledgment.pdf",
+      "See how personal assistance needs are reviewed, planned, and updated over time.",
+    href: "",
+    status: "summary",
   },
   {
     title: "What to Expect During Home Visits",
     description:
-      "A simple guide to what clients and families can expect from non-medical support during visits.",
-    href: "/documents/what-to-expect-during-home-visits.pdf",
+      "Get a simple overview of what non-medical support may look like during home visits.",
+    href: "",
+    status: "summary",
   },
   {
-    title: "PAS Scope of Services",
+    title: "Client Intake Information Form",
     description:
-      "A non-medical PAS overview describing the types of daily living support Safe Comfort may provide.",
-    href: "/documents/pas-scope-of-services.pdf",
+      "Download the intake form to begin gathering basic client information for service planning.",
+    href: "/documents/client-intake-information-form.pdf",
+    status: "download",
   },
 ];
 
@@ -300,7 +306,7 @@ function Home() {
                 <p className="mt-3 flex-1 leading-7 text-gray-700">
                   {resource.description}
                 </p>
-                {resource.href ? (
+                {resource.href && (
                   <a
                     href={resource.href}
                     target="_blank"
@@ -309,19 +315,11 @@ function Home() {
                   >
                     View / Download
                   </a>
-                ) : (
-                  <span className="mt-6 inline-flex justify-center rounded-lg border border-blue-200 bg-white px-4 py-3 text-sm font-semibold text-blue-900">
-                    Coming Soon
-                  </span>
                 )}
               </article>
             ))}
           </div>
 
-          <p className="mt-8 rounded-lg bg-blue-900 px-5 py-4 text-sm leading-6 text-blue-50">
-            Downloadable documents are placeholders for now and will be
-            finalized after the client confirms which files should be public.
-          </p>
         </div>
       </section>
 
