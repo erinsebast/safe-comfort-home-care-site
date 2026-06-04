@@ -4,12 +4,16 @@ import Footer from "./components/Footer";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function App() {
   const currentPath = window.location.pathname;
   const pageRoutes = {
     "/careers": Careers,
     "/contact": Contact,
+    "/privacy": Privacy,
+    "/terms": Terms,
   };
   const CurrentPage = pageRoutes[currentPath] ?? Home;
 
