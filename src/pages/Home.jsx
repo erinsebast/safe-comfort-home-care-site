@@ -91,42 +91,42 @@ const resourceLinks = [
   {
     title: "Client Rights & Responsibilities",
     description:
-      "Learn about client rights, responsibilities, and expectations for receiving respectful care.",
+      "Information about client rights, responsibilities, and expectations while receiving care.",
     href: "",
     status: "summary",
   },
   {
     title: "Grievance Procedure",
     description:
-      "Review how clients and families can share concerns, complaints, or service feedback.",
+      "How clients and families can share concerns, complaints, or feedback about services.",
     href: "",
     status: "summary",
   },
   {
     title: "Notice of Privacy Practices / HIPAA",
     description:
-      "Understand how privacy practices protect personal and health-related information.",
+      "An overview of how personal and health-related information is protected.",
     href: "",
     status: "summary",
   },
   {
     title: "Service Plan Process",
     description:
-      "See how personal assistance needs are reviewed, planned, and updated over time.",
+      "How care needs are discussed, planned, reviewed, and updated over time.",
     href: "",
     status: "summary",
   },
   {
     title: "What to Expect During Home Visits",
     description:
-      "Get a simple overview of what non-medical support may look like during home visits.",
+      "What clients and families can expect during non-medical personal assistance visits.",
     href: "",
     status: "summary",
   },
   {
     title: "Client Intake Information Form",
     description:
-      "Download the intake form to begin gathering basic client information for service planning.",
+      "Download the intake form to provide basic client information for service planning.",
     href: "/documents/client-intake-information-form.pdf",
     status: "download",
   },
@@ -289,9 +289,9 @@ function Home() {
             Helpful documents for clients and families
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-700">
-            These resources will help explain client rights, privacy practices,
-            the service planning process, and what to expect from non-medical
-            personal assistance services.
+            Find important information about client rights, privacy, service
+            planning, home visits, and intake forms for Safe Comfort Home Care
+            services.
           </p>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
