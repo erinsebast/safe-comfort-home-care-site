@@ -111,7 +111,21 @@ function Contact() {
           </div>
         </div>
 
-        <form className="mt-8 rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className="mt-8 rounded-lg border border-blue-100 bg-white p-6 shadow-sm"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p className="hidden">
+            <label>
+              Don&apos;t fill this out if you&apos;re human:
+              <input name="bot-field" />
+            </label>
+          </p>
+
           <div className="max-w-3xl">
             <h2 className="text-xl font-bold text-blue-900">Send a Message</h2>
             <p className="mt-3 leading-7 text-gray-700">
@@ -125,7 +139,7 @@ function Contact() {
               <span className="text-sm font-semibold text-blue-900">Name</span>
               <input
                 type="text"
-                name="contact-name"
+                name="name"
                 placeholder="Full name"
                 className="mt-2 w-full rounded-lg border border-blue-200 px-4 py-3 text-gray-800 outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-100"
               />
@@ -137,7 +151,7 @@ function Contact() {
               </span>
               <input
                 type="tel"
-                name="contact-phone"
+                name="phone"
                 placeholder="Phone number"
                 className="mt-2 w-full rounded-lg border border-blue-200 px-4 py-3 text-gray-800 outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-100"
               />
@@ -149,7 +163,7 @@ function Contact() {
               </span>
               <input
                 type="email"
-                name="contact-email"
+                name="email"
                 placeholder="Email address"
                 className="mt-2 w-full rounded-lg border border-blue-200 px-4 py-3 text-gray-800 outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-100"
               />
@@ -160,7 +174,7 @@ function Contact() {
                 Message
               </span>
               <textarea
-                name="contact-message"
+                name="message"
                 rows="5"
                 placeholder="How can we help?"
                 className="mt-2 w-full rounded-lg border border-blue-200 px-4 py-3 text-gray-800 outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-100"
@@ -169,7 +183,7 @@ function Contact() {
           </div>
 
           <button
-            type="button"
+            type="submit"
             className="mt-6 rounded-lg bg-teal-600 px-5 py-3 font-semibold text-white transition hover:bg-teal-700"
           >
             Send Message

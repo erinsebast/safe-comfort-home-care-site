@@ -133,7 +133,26 @@ function Careers() {
             </article>
           </div>
 
-          <form className="rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
+          <form
+            name="career-application"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            encType="multipart/form-data"
+            className="rounded-lg border border-blue-100 bg-white p-6 shadow-sm"
+          >
+            <input
+              type="hidden"
+              name="form-name"
+              value="career-application"
+            />
+            <p className="hidden">
+              <label>
+                Don&apos;t fill this out if you&apos;re human:
+                <input name="bot-field" />
+              </label>
+            </p>
+
             <h2 className="text-xl font-bold text-blue-900">Apply Online</h2>
             <p className="mt-3 leading-7 text-gray-700">
               Share your contact information, availability, and caregiving
@@ -215,7 +234,7 @@ function Careers() {
             </div>
 
             <button
-              type="button"
+              type="submit"
               className="mt-6 w-full rounded-lg bg-teal-600 px-5 py-3 font-semibold text-white transition hover:bg-teal-700"
             >
               Submit Application
