@@ -5,6 +5,8 @@ const careerReasons = [
 ];
 
 const minimumRequirements = [
+  "High school diploma or GED required.",
+  "Caregiving experience is preferred.",
   "Reliable, compassionate, and respectful approach to client care.",
   "Ability to assist with non-medical daily living tasks and household support.",
   "Clear communication with clients, families, and the Safe Comfort Home Care team.",
@@ -16,14 +18,16 @@ const employmentDocuments = [
   {
     title: "Employment Application",
     description:
-      "Download the employment application form to review or complete as part of the hiring process.",
-    href: "/documents/employment-application.pdf",
+      "Complete the editable online application form directly on this website.",
+    href: "#career-application",
+    actionLabel: "Apply Online",
   },
   {
     title: "PAS Attendant Job Description",
     description:
       "Review the PAS attendant role, responsibilities, and expectations before applying.",
     href: "/documents/pas-attendant-job-description.pdf",
+    actionLabel: "View / Download",
   },
 ];
 
@@ -121,11 +125,12 @@ function Careers() {
                     </p>
                     <a
                       href={document.href}
-                      target="_blank"
-                      rel="noreferrer"
                       className="mt-3 inline-flex rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-700"
+                      {...(document.href.startsWith("/documents/")
+                        ? { target: "_blank", rel: "noreferrer" }
+                        : {})}
                     >
-                      View / Download
+                      {document.actionLabel}
                     </a>
                   </div>
                 ))}
@@ -134,6 +139,7 @@ function Careers() {
           </div>
 
           <form
+            id="career-application"
             name="career-application"
             method="POST"
             data-netlify="true"
@@ -156,8 +162,8 @@ function Careers() {
             <h2 className="text-xl font-bold text-blue-900">Apply Online</h2>
             <p className="mt-3 leading-7 text-gray-700">
               Share your contact information, availability, and caregiving
-              experience. Application submissions will be connected after the
-              client confirms the final hiring workflow.
+              experience. Submitted applications are received privately by Safe
+              Comfort Home Care and are not published on the website.
             </p>
 
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
