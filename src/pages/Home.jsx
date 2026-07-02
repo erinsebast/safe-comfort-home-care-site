@@ -352,12 +352,8 @@ function Home() {
             Testimonials
           </p>
           <h2 className="mt-3 text-3xl font-bold text-blue-900">
-            Family feedback placeholder
+            Coming soon
           </h2>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-700">
-            Testimonials can be added here once Safe Comfort Home Care has
-            approved family or client feedback to publish.
-          </p>
         </div>
       </section>
 
