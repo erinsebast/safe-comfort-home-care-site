@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "../assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -19,18 +20,18 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-blue-100 bg-white/95 shadow-sm backdrop-blur">
       <nav className="mx-auto max-w-6xl px-6" aria-label="Primary navigation">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-2">
           <a
             href="/"
-            className="flex min-w-0 items-center gap-3"
+            className="shrink-0 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
             onClick={closeMenu}
+            aria-label="Safe Comfort Home Care homepage"
           >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-lg font-bold text-white">
-              SC
-            </span>
-            <span className="truncate text-lg font-bold text-blue-900">
-              Safe Comfort Home Care
-            </span>
+            <img
+              src={logo}
+              alt="Safe Comfort Home Care, LLC"
+              className="h-16 w-auto object-contain sm:h-20"
+            />
           </a>
 
           <div className="hidden items-center gap-7 text-sm font-semibold text-blue-900 lg:flex">
